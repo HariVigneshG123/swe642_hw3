@@ -2,18 +2,18 @@ pipeline{
     agent any
     environment{
         registryCredential = 'dockercred'
-        registry = 'achudan/studentangular'
+        registry = 'hvignesh/swe642_hw3'
     }
     tools {nodejs "71Node"}
     stages {
         stage('INSTALL PACKAGES') {
             steps {
-                bat "npm install"
+                sh "npm install"
             }
         }
         stage('BUILD APP') {
             steps {
-                bat "node_modules/.bin/ng build --prod"
+                sh "node_modules/.bin/ng build --prod"
             }
         }
         stage("BUILD DOCKER") {
@@ -34,7 +34,7 @@ pipeline{
         }
         stage("DOCKER RUN") {
             steps {
-                bat 'docker run -p4200:80 hvignesh/swe642_hw3:latest'
+                sh 'docker run -p4200:80 hvignesh/swe642_hw3:latest'
             }
         }
     }
