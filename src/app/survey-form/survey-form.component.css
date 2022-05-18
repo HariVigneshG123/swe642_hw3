@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #f6f6f6;
+}
+
+/* -------------------------------------------HOMEPAGE STYLING--------------------------------------------- */
+
+h1 {
+  font-size: 27px;
+  margin: auto;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: 5px solid #006633;
+  color: #006633;
+  padding: 10px 25px;
+  text-align: center;
+  width: fit-content;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 3px 5px 3px 5px rgba(167, 167, 167, 0.6);
+  height: min-content;
+  border-radius: 5px;
+}
+h3 {
+  font-family: "Montserrat", sans-serif;
+}
+/* -------------------------------------OVERVIEW SECTION----------------------------------------- */
+.overview-section {
+  margin-top: 40px;
+}
+
+.overview {
+  width: 85%;
+  margin: 70px auto;
+}
+.overview-section h2 {
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
+
+.overview-section p {
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+
+/* --------------------------------------------DEGREES LIST---------------------------------------------- */
+.degrees-list {
+  width: 85%;
+  margin: auto;
+}
+
+.overview-section ol {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}
+
+.overview-section ol li {
+  margin: 13px 0;
+  padding-left: 8px;
+}
+
+/* ----------------------------------------------------Email-------------------------------------------- */
+.invalid-msg{
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* ---------------------------------------SURVEY FORM LINK------------------------------------------- */
+.survey-form-link {
+  width: fit-content;
+  padding: 13px 20px;
+  border-radius: 10px;
+  background-color: #006633;
+  margin: 70px auto;
+}
+.survey-form-link:hover {
+  box-shadow: 3px 5px 3px 5px rgba(167, 167, 167, 0.6);
+}
+
+.survey-form-link a {
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+}
+
+/* ----------------------------------------------SURVEY FORM PAGE------------------------------------------- */
+.survey-form-section {
+  margin-top: 40px;
+  position: relative;
+}
+
+.survey-form-section form {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-styling div label {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.custom-styling div input {
+  width: 100%;
+  /*padding: 11px 11px;*/
+  border: none;
+  border-radius: 4px;
+  border-bottom: 1px solid navy;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  outline-color: #ffcc33;
+}
+
+form span {
+  color: red;
+  font-size: 20px;
+}
+
+.custom-styling div {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 17px;
+}
+/*-----------------------------------CHECKBOX SECTION----------------------------------*/
+.checkboxes-section {
+  max-width: fit-content;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.checkboxes-section label {
+  margin: 0;
+  padding: 0;
+  margin-left: 20px;
+  font-weight: 500;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+}
+.checkboxes-section input {
+  margin-top: 12px;
+  margin-left: 30px;
+}
+
+/* -----------------------------------------RADIOBOX SECTION---------------------------------------- */
+.radioboxes-section {
+  max-width: fit-content;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.radioboxes-section label {
+  margin: 0;
+  padding: 0;
+  margin-left: 20px;
+  font-weight: 500;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.radioboxes-section input {
+  margin-top: 12px;
+  margin-left: 30px;
+}
+
+/* -----------------------------------------TEXTAREA-------------------------------------------- */
+.textarea-section {
+  margin: auto;
+  width: 50%;
+  margin-top: 60px;
+}
+
+.textarea-section label {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.textarea-section textarea {
+  margin-top: 10px;
+  border-radius: 3px;
+  border: none;
+  border-bottom: 1px solid navy;
+  outline: none;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  padding: 10px 10px;
+  width: 100%;
+}
+/*  -----------------------------------------DATALIST SECTION------------------------------------------- */
+.grad-month {
+  margin: auto;
+  margin-top: 50px;
+  width: fit-content;
+}
+
+.grad-month label {
+  font-weight: 500;
+  margin: 0 5px 0 15px;
+  font-size: 18px;
+}
+.grad-month input {
+  margin-top: 15px;
+  width: 40%;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 4px;
+  border-bottom: 1px solid navy;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  outline-color: #ffcc33;
+  margin-left: 28px;
+}
+
+/* ----------------------------------------DEPARMENT REFER------------------------------------------ */
+.dropdown-section {
+  margin: auto;
+  margin-top: 50px;
+  width: fit-content;
+}
+
+.dropdown-section label {
+  font-size: 18px;
+  font-weight: 500;
+  margin-right: 13px;
+}
+.dropdown-section select {
+  padding: 7px 7px;
+  border-radius: 3px;
+  border: none;
+  border-bottom: 1px solid navy;
+  outline: none;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+/* -----------------------------------------SUBMIT BUTTON--------------------------------------------  */
+
+.btn-div {
+  margin: 25px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-div button {
+  display: block;
+  padding: 10px 32px;
+  font-size: 16px;
+  background-color: #ffcc33;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  border: none;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+.btn-div button:hover {
+  color: #ffcc33;
+  background-color: black;
+}
+
+/* ----------------------------------------LOGO IMAGE-------------------------------------------- */
+
+
+
+.logo-image {
+  float: right;
+  right: 30px;
+  background-image: url("src/assets/GMULOGO.png");
+  width: 150px;
+  height: 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  border-radius: 15px;
+  transform: translateY(0);
+  transition: transform 0.4s ease-out;
+}
+
+.logo-image:hover {
+  transform: translateY(-20px);
+}
+
+
+@media (max-width: 600px) {
+  .data-field,
+  .form-fields {
+    gap: 0;
+  }
+  .data-item,
+  .custom-styling {
+    flex: 100%;
+  }
+}

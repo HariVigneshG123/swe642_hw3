@@ -1,0 +1,105 @@
+.navbar.navbar-dark .navbar-nav .nav-item .nav-link {
+    color: white;
+    font-weight: 500;
+    border-top: 1px solid #006940;
+    border-bottom: 1px solid #006940;
+  }
+  
+  .navbar.navbar-dark .navbar-nav .nav-item .nav-link:hover {
+    color: #fc3;
+    border-top: 1px solid #fc3;
+    border-bottom: 1px solid #fc3;
+  }
+  
+  .nga-navbar {
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 11px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 11px 10px 0 rgba(0, 0, 0, 0.12);
+    background-color: #006940;
+  }
+  
+  .nga-navbar-logo {
+    font-weight: 700;
+  }
+  
+  .nga-navbar-logo:hover {
+    color: rgba(255, 255, 255, 0.75);
+  }
+  
+  .nga-btn-navbar {
+    color: #fff;
+    background-color: #1976d2;
+    border-color: #0d6efd;
+  }
+  
+  .nga-btn-navbar:hover {
+    color: white;
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+  }
+  
+  /*home css*/
+  .nga-gradient {
+    padding: 3rem 0;
+    background: linear-gradient(205deg, #fc3, #006940);
+  }
+  
+  .nga-btn-home {
+    font-family: inherit;
+    color: inherit;
+    display: inline-block;
+    line-height: 32px;
+    line-height: 3.2rem;
+    padding: 0 16px;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    border-radius: 3px;
+    text-decoration: none;
+    overflow: hidden;
+    border: none;
+    color: white;
+  }
+  
+  .nga-btn-home {
+    background-color: black;
+    /*padding: 2px 34px 0;*/
+    font-size: 16px;
+    /*font-size: 1.6rem;*/
+    font-weight: 600;
+    line-height: 30px;
+    line-height: 3rem;
+    border-radius: 48px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+    box-sizing: border-box;
+    cursor: pointer
+  }
+  
+  .nga-btn-home:hover {
+    background-color: #006940;
+    color: yellow;
+    text-decoration: underline;
+  }
+  
+  .nga-card-step {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .04), 0 3px 3px rgba(0, 0, 0, .09);
+    margin: 4px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .nga-card-step:hover {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .09), 0 4px 4px rgba(0, 0, 0, .13);
+    border-radius: 5px;
+    color: #0d6efd;
+  
+  }
+  
+  .nga-card-step a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .nga-card-step a:hover {
+    color: #0d6efd;
+    text-decoration: none;
+  }

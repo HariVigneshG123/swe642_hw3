@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey form</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+  </head>
+  <body>
+    <div class="form">
+    <div class="survey-form-section w3-container">
+      <h1>survey form</h1>
+      <form (ngSubmit)="onSubmit()" #myForm="ngForm" autocomplete="on">
+        <!-- -----------------------------------------NAME INPUT-------------------------------------------- -->
+        <div class="w3-row">
+          <div class="w3-col l6 custom-styling">
+            <div class="form-group" ngModelGroup="personDetails" #personalDetail="ngModelGroup">
+              <label for="fname">FirstName<sup><span>*</span></sup></label>
+              <br />
+              <input type="text" id="fname" placeholder="John" minlength="3" class="form-control"
+              name="firstname" [(ngModel)] = "survey.firstName" #fname="ngModel" [class.is-invalid]="fname.invalid && fname.touched" required>
+              <br />
+            <div *ngIf="fname.errors && (fname.invalid || fname.touched)" style="margin: revert;">
+              <small class="text-danger invalid-msg" *ngIf="fname.errors['required']">First Name is required</small>
+              <small class="text-danger invalid-msg" *ngIf="fname.errors['minlength']">First Name is minimum {{ fname.errors && fname.errors['minlength'].requiredLength }} character.</small>
+            </div>
+              <br />
+
+            </div>
+
+            <div class="form-group">
+              <label for="lname">LastName<sup><span>*</span></sup></label>
+              <br />
+              <input type="text" id="lname" placeholder="John" minlength="3" class="form-colntrol"
+              name="lastname" [(ngModel)] = "survey.lastName" #lname="ngModel" [class.is-invalid]="lname.invalid && lname.touched" required>
+              <br />
+            <div *ngIf="lname.errors && (lname.invalid || lname.touched)" style="margin: revert;">
+              <small class="text-danger invalid-msg" *ngIf="lname.errors['required']">Last Name is required</small>
+              <small class="text-danger invalid-msg" *ngIf="lname.errors['minlength']">Last Name is minimum {{ lname.errors && lname.errors['minlength'].requiredLength }} character.</small>
+            </div>
+              <br />
+
+            </div>
+
+            <!-- -----------------------------------------ADDRESS INPUT-------------------------------------------- -->
+            <div class="form-group">
+              <label for="address">Street Address<sup><span>*</span></sup></label>
+              <br />
+              <input
+                type="text"
+                id="address"
+                name="address"
+                placeholder="123 Main Street"
+                [(ngModel)] = "survey.address" required #address ="ngModel" class="form-control"
+                [class.is-invalid]="address.invalid && address.touched" required
+              />
+              <br />
+              <div *ngIf="address.errors && (address.invalid || address.touched)" style="margin: revert;">
+                <small class="text-danger invalid-msg" *ngIf="address.errors['required']">Address is required</small>
+              </div>
+              <br />
+            </div>
+            <!-- -----------------------------------------CITY INPUT-------------------------------------------- -->
+            <div class="form-group">
+              <label for="city">City<sup><span>*</span></sup></label>
+              <br />
+              <input
+                type="text"
+                id="city"
+                name="city"
+                placeholder="New York"
+                [(ngModel)] = "survey.city" required #city ="ngModel" class="form-control"
+                [class.is-invalid]="city.invalid && city.touched" required
+              /><br />
+              <div *ngIf="city.errors && (city.invalid || city.touched)" style="margin: revert;">
+                <small class="text-danger invalid-msg" *ngIf="city.errors['required']">City is required</small>
+              </div>
+              <br />
+            </div>
+            <!-- -----------------------------------------STATE INPUT-------------------------------------------- -->
+            <div class="form-group">
+              <label for="state">State<sup><span>*</span></sup></label>
+              <br />
+              <input
+                type="text"
+                id="state"
+                name="state"
+                placeholder="NY"
+                [(ngModel)] = "survey.state" required #state ="ngModel" class="form-control"
+                [class.is-invalid]="state.invalid && state.touched" required
+              />
+              <br />
+              <div *ngIf="city.errors && (state.invalid || state.touched)" style="margin: revert;">
+                <small class="text-danger invalid-msg" *ngIf="state.errors['required']">State is required</small>
+              </div>
+              <br />
+            </div>
+          </div>
+            <!-- -----------------------------------------ZIP INPUT-------------------------------------------- -->
+            <div class="w3-col l6 custom-styling">
+              <div class="form-group">
+                <label for="zip">Zip<sup><span>*</span></sup></label>
+                <br />
+                <input
+                  type="text"
+                  id="zip"
+                  name="zip"
+                  pattern="[0-9]{5}"
+                  placeholder="10030"
+                  title="Five digit zip code"
+                  [(ngModel)] = "survey.zipCode" required #zip ="ngModel" class="form-control"
+                  [class.is-invalid]="zip.invalid && zip.touched" required
+                /><br />
+                <div *ngIf="zip.errors && (zip.invalid || zip.touched)" style="margin: revert;">
+                  <small class="text-danger invalid-msg" *ngIf="zip.errors['required']">Zip Code is required</small>
+                  <small class="text-danger invalid-msg" *ngIf="zip.errors['pattern']">Please provide a valid Zip Code</small>
+                </div>
+              </div>
+
+          <!-- -----------------------------------TELEPHONE NUMBER INPUT---------------------------------- -->
+
+            <div class="form-group">
+              <label for="telephone">Telephone Number<sup><span>*</span></sup></label>
+              <br />
+              <input
+                type="tel"
+                id="telephone"
+                name="telephone"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                placeholder="512-012-3456"
+                [(ngModel)] = "survey.telephone" required #tel ="ngModel" class="form-control"
+                [class.is-invalid]="tel.invalid && tel.touched" required
+              /><br />
+              <div *ngIf="tel.errors && (tel.invalid || tel.touched)" style="margin: revert;">
+                <small class="text-danger invalid-msg" *ngIf="tel.errors['required']">Telephone is required</small>
+                <small class="text-danger invalid-msg" *ngIf="tel.errors['pattern']">Provide a valid telephone(#999-999-9999)</small>
+              </div>
+              <br />
+            </div>
+            <!-- -----------------------------------------EMAIL INPUT-------------------------------------------- -->
+            <div class="form-group">
+              <label for="email">E-Mail<sup><span>*</span></sup></label>
+              <br />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="something@gmail.com"
+                [(ngModel)] = "survey.email" #email ="ngModel" [class.is-invalid]="email.invalid && email.touched" required
+                pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" 
+              /><br /> 
+              <div *ngIf="email.errors && (email.invalid || email.touched)" style="margin: revert;">
+                <small class="text-danger invalid-msg" *ngIf="email.errors['required']">Email is required</small>
+                <small class="text-danger invalid-msg" *ngIf="email.errors['pattern']">Please provide a valid email address</small>
+              </div>
+              <br />
+            </div>
+            <!-------------------------------------------DATE INPUT-------------------------------------------- -->
+            <div class="form-group">
+              <label for="date">Date Of Survey<sup><span>*</span></sup></label>
+              <br />
+              <input type="date" id="date" name="date" [(ngModel)] = "survey.surveyDate" required #surveyDate ="ngModel" class="form-control"
+              [class.is-invalid]="surveyDate.invalid && surveyDate.touched" required/>
+              <br />
+              <div *ngIf="surveyDate.errors && (surveyDate.invalid || surveyDate.touched)" style="margin: revert;">
+                <small class="text-danger invalid-msg" *ngIf="surveyDate.errors['required']">Survey Date is required</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ------------------------------------CHECKBOX SECTION---------------------------------->
+        <div class="w3-row">
+          <div class="w3-col l6">
+            <div class="checkboxes-section form-group">
+              <h3>What do you like about us?</h3>
+              <div *ngFor="let obj of mostLiked">
+                <input type="checkbox"  value="{{obj.value}}" (change)="mostLikedChange($event)" />
+                <label for="students">{{obj.key}}</label>
+                <br />
+              </div>
+            </div>
+          </div>
+          <!-- -----------------------------------------RADIOBOX SECTION-------------------------------------------->
+          <div class="w3-col l6">
+            <div class="radioboxes-section">
+              <h3>How do you know about us?</h3>
+              <div ><span *ngFor="let know of knowaboutus">
+                <input type="radio" id="{{know.id}}" value="{{know.value}}" name="knowaboutus" [(ngModel)] = "survey.knowAboutUs">
+                <label for="friends" style="color:black">{{know.value}}</label><br/>
+              </span>
+            </div>
+            </div>
+          </div>
+        </div>
+        <!-- -----------------------------------------DATALIST------------------------------------------- -->
+        <div class="w3-row">
+          <div class="w3-col l12">
+            <div class="grad-month">
+              <div class="dropdown-section">
+              <label for="month">Choose your Graduation Month</label>
+              <br />
+              <label for="month">Month</label>
+              <select id="month" name="month" [(ngModel)]="survey.gradMonth">
+                <option value="January">January</option>
+                <option value="Feburary">Feburary</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+              </select>
+
+            </div>
+              <label for="year">Year</label>
+              <input
+                type="number"
+                id="year"
+                name="year"
+                min="1990"
+                max="2022"
+                placeholder="Year" [(ngModel)] = "survey.gradYear"
+              /><br />
+            </div>
+
+            <!-- ----------------------------------------DEPARMENT REFER--------------------------------------------->
+            <div class="dropdown-section">
+              <label for="recommend">Recommending Other Students</label>
+              <select name="recommend" id="recommend" [(ngModel)]="survey.yourRecommendation">
+                <option value="Very Likely">Very Likely</option>
+                <option value="Likely">Likely</option>
+                <option value="Unlikely">Unlikely</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <!-- -----------------------------------------TEXTAREA-------------------------------------------- -->
+        <div class="w3-col l12">
+          <div class="textarea-section">
+            <label for="comment">Comments</label>
+            <br />
+            <textarea id="comment" name="comment" rows="4" [(ngModel)]="survey.comment"></textarea>
+          </div>
+        </div>
+
+        <!-- -----------------------------------------SUBMIT BUTTON-------------------------------------------- -->
+        <div class="btn-div">
+          <button [disabled]="myForm.invalid" class="btn btn-primary" type="submit" id="submit">Submit</button>
+          <button type="reset" id="reset">Reset</button>
+          <button type="button" class="btn btn-default pull-right" (click)="cancel()">Cancel</button>
+        </div>
+      </form>
+      <!-- ----------------------------------------LOGO IMAGE-------------------------------------------- -->
+      <a href="https://cs.gmu.edu/prospective-students/ms-programs/ms-in-cs/" target="_blank">
+        <div class="logo-image"></div>
+      </a>
+    </div>
+  </div>
+  </body>
+</html>

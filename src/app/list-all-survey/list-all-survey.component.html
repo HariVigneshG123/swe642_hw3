@@ -1,0 +1,18 @@
+
+
+      <h1>List Of Surveys</h1><br>
+      <div class="list-all">
+      <h4>Student IDs</h4>
+      <ul>
+          <li *ngFor="let id of studentIds">
+              <a class="nga-btn-home" routerLink="view-list-item" routerLinkActive="active" (click)="surveyDetails(id.id)">{{id.id}}</a>
+         </li>
+
+      </ul>
+
+      
+      </div>
+
+      <div class = "container">
+        <router-outlet></router-outlet>
+      </div>

@@ -1,0 +1,20 @@
+h1 {
+    font-size: 27px;
+    margin: auto;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 5px solid #006633;
+    color: #006633;
+    padding: 10px 25px;
+    text-align: center;
+    width: fit-content;
+    font-family: "Montserrat", sans-serif;
+    box-shadow: 3px 5px 3px 5px rgba(167, 167, 167, 0.6);
+    height: min-content;
+    border-radius: 5px;
+  }
+
+  .list-all{
+      padding-left: 600px;
+      margin-top: 20px;
+  }
